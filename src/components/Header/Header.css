@@ -1,0 +1,211 @@
+.top-bar {
+    background-color: rgba(0, 102, 153, 0.1);
+    color: #006699;
+    display: flex;
+    padding-left: 10%;
+    font-size: 11px;
+    gap: 15px;
+    text-align: left;
+    line-height: 32px;
+    letter-spacing: normal;
+    font-weight: bold;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: white;
+    border-bottom: 1px solid #006699;
+}
+
+.logo-left {
+    display: flex;
+    align-items: center;
+}
+
+.search-btn {
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    padding-left: 30px;
+}
+
+.search-icon {
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    color: #006699;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.event-logo {
+    width: 80px;
+    height: 65px;
+}
+
+.ieee-logo {
+    padding-top: 10px;
+    width: 108px;
+    height: 32px;
+}
+
+.navbar {
+    background-color: #006699;
+    display: flex;
+    justify-content: start;
+    align-items: left;
+    gap: 15px;
+    padding: 20px;
+    padding-left: 10%;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #006699;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .top-bar {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .logo-left .event-logo {
+        justify-items: center;
+    }
+
+    .logo-left .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #006699;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 10;
+        text-decoration: none;
+    }
+
+    .logo-left .nav-links.open {
+        display: flex;
+    }
+
+    .logo-left .hamburger {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #006699;
+        font-size: 28px;
+        margin-left: auto;
+    }
+
+    .logo-left a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        position: relative;
+        font-weight: bold;
+    }
+
+    .logo-left .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #006699;
+        min-width: 300px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .logo-left .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .logo-left .dropdown-content.open {
+        display: block;
+    }
+
+    .logo-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 5%;
+    }
+
+    .logo-section {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 5%;
+    }
+
+    .logo-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .event-logo {
+        width: 60px;
+        height: 48px;
+    }
+
+    .ieee-logo {
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navbar .hamburger {
+        display: none;
+    }
+
+    .navbar .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+    }
+}

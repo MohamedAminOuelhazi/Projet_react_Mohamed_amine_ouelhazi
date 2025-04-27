@@ -1,0 +1,137 @@
+.footer {
+    background: #0071a4;
+    color: #fff;
+    position: relative;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.footer-nav {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 18px;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 70px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.footer-nav a:hover {
+    color: #b3e0f7;
+}
+
+.footer-nav span {
+    color: #b3e0f7;
+    font-weight: bold;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 50px;
+    gap: 30px;
+
+    margin-bottom: 50px;
+}
+
+.footer-text p {
+    flex: 2;
+    font-size: 12px;
+    text-align: left;
+    line-height: 22px;
+    letter-spacing: normal;
+
+}
+
+.footer-social {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 28px;
+    min-width: 250px;
+}
+
+.footer-social a img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s;
+}
+
+.footer-social a:hover img {
+    filter: brightness(0.7) invert(0.8) sepia(1) hue-rotate(180deg);
+}
+
+.back-to-top {
+    position: fixed;
+    left: 16px;
+    bottom: 24px;
+    background: #f5f5f5;
+    color: #0071a4;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    transition: background 0.2s, color 0.2s;
+    /*background-image: url('/icons/cookie.svg');*/
+    /* Replace with your icon */
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 24px 24px;
+}
+
+.back-to-top:hover {
+    background: #b3e0f7;
+    color: #005377;
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 30px 0 16px 0;
+    }
+
+    .footer-content {
+        padding: 0 10px;
+    }
+
+    .footer-nav {
+        font-size: 0.95rem;
+        gap: 10px;
+    }
+
+    .footer-social a img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .back-to-top {
+        font-size: 1rem;
+        padding: 10px 16px 10px 38px;
+        background-size: 20px 20px;
+    }
+}
